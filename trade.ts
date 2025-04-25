@@ -27,8 +27,6 @@ export async function placeOrder(tradingsymbol:string , quantity: number , type:
         order_type: "MARKET"
     });
 
-    // await generateSession();
-    // await getProfile();
   } catch (err) {
     console.error(err);
   }
@@ -43,35 +41,3 @@ export async function getPositions(){
   })
   return allHoldings;
 }
-
-// async function generateSession() {
-//   try {
-//     // const response = await kc.generateSession(requestToken, apiSecret);
-//     // console.log(response.access_token);
-    
-//     // kc.setAccessToken(response.access_token);
-//     // console.log("Session generated:", response);
-//   } catch (err) {
-//     console.error("Error generating session:", err);
-//   }
-// }
-
-// async function getProfile() {
-//   try {
-//     // const profile = await kc.placeOrder("regular",{
-//     //     exchange: "NSE",
-//     //     tradingsymbol: "HDFCBANK",
-//     //     transaction_type: "BUY",
-//     //     quantity: 1,
-//     //     product: "CNC",
-//     //     order_type: "MARKET"
-//     // });
-//     // const profile = await kc.getProfile();
-//     console.log("Profile:", profile);
-//   } catch (err) {
-//     console.error("Error getting profile:", err);
-//   }
-// }
-// Initialize the API calls
-
-// init();

@@ -1,8 +1,5 @@
 import { getPositions, placeOrder } from "./trade";
 
-placeOrder("ITC" , 1 , "BUY")
-
-
 import { McpServer, ResourceTemplate } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -12,14 +9,6 @@ const server = new McpServer({
   name: "Demo",
   version: "1.0.0"
 });
-
-// Add an addition tool
-server.tool("add",
-  { a: z.number(), b: z.number() },
-  async ({ a, b }) => ({
-    content: [{ type: "text", text: String(a + b) }]
-  })
-);
 
 server.tool("buy-stock" , "Buys the stock on zerodha exchange for the user. It executes a real order for the user on the exchange.",
     {
@@ -54,7 +43,6 @@ server.tool("show-portfolio" , "Shows my complete portfolio in Zerodha",
         }
     }
 )
-
 
 // Start receiving messages on stdin and sending messages on stdout
 const transport = new StdioServerTransport();
