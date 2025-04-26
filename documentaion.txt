@@ -1,0 +1,9 @@
+https://modelcontextprotocol.io/quickstart/server#windows
+
+https://github.com/zerodha/kiteconnectjs
+
+https://github.com/modelcontextprotocol/servers
+
+https://developers.kite.trade/apps
+
+https://github.com/modelcontextprotocol/typescript-sdk

@@ -33,11 +33,11 @@ export async function placeOrder(tradingsymbol:string , quantity: number , type:
 }
 
 export async function getPositions(){
-  kc.setAccessToken(accesToken);
+  // kc.setAccessToken(accesToken);
   const holdings = await kc.getPositions();
   let allHoldings = "";
-  holdings.net.map(holdings => {
-    allHoldings += `stock: ${holdings.tradingsymbol} , qty: ${holdings.quantity} , currentPrice: ${holdings.last_price} `
+  holdings.net.map(holding => {
+    allHoldings += `stock: ${holding.tradingsymbol} , qty: ${holding.quantity} , currentPrice: ${holding.last_price} `;
   })
   return allHoldings;
 }
