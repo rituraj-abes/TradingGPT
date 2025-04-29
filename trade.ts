@@ -1,24 +1,12 @@
 import { KiteConnect } from "kiteconnect";
 
 const apiKey = "tr6u5rpzrarom1gd";
-
-// it is used verify or generate the accesToken 
-const apiSecret = "vuhv3obi7wkpznoowwltbtkdalmlp847";
-// const requestToken = "sE25I0TpRlxz9OnYFR9QdAG7kdqnohsF";
-// requestToken keeps getting changed again and again so we need access Token to place orders 
-
 let accesToken = "Qljeluhd0LvWj5TQt5eAPNkzZ7bcntwP";
 
 const kc = new KiteConnect({ api_key: apiKey });
 
-// to get the request token 
-// console.log(kc.getLoginURL());
-
 // set the accesToken for all the future request I am sending 
 kc.setAccessToken(accesToken);
-
-// console.log(response.access_token);
-
 
 export async function placeOrder(tradingsymbol:string , quantity: number , type: "BUY" | "SELL") {
   try {
