@@ -7,3 +7,6 @@ https://github.com/modelcontextprotocol/servers
 https://developers.kite.trade/apps
 
 https://github.com/modelcontextprotocol/typescript-sdk
+
+bun location :
+C:\Users\ritur\.bun\bin\bun.exe

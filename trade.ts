@@ -10,10 +10,15 @@ const apiSecret = "vuhv3obi7wkpznoowwltbtkdalmlp847";
 let accesToken = "Qljeluhd0LvWj5TQt5eAPNkzZ7bcntwP";
 
 const kc = new KiteConnect({ api_key: apiKey });
+
+// to get the request token 
 // console.log(kc.getLoginURL());
 
 // set the accesToken for all the future request I am sending 
 kc.setAccessToken(accesToken);
+
+// console.log(response.access_token);
+
 
 export async function placeOrder(tradingsymbol:string , quantity: number , type: "BUY" | "SELL") {
   try {
